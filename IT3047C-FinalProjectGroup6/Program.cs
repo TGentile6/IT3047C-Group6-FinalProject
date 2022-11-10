@@ -1,6 +1,11 @@
+using IT3047C_FinalProjectGroup6.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<RecipeContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Context")));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

@@ -4,24 +4,25 @@ namespace IT3047C_FinalProjectGroup6.Models
 {
     public class Recipe
     {
+        public Recipe()
+        {
 
-        public int RecipeID { get; set; }
+        }
+        public int id { get; set; }
 
         [Required(ErrorMessage = "Recipe must include a name.")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         [Required(ErrorMessage = "Recipe must include a description.")]
-        public string Description { get; set; }
-        
+        public string? Description { get; set; }
+
         [Required(ErrorMessage = "Recipe must include ingredients.")]
-        public string Ingredients { get; set; }
+        public string? Ingredients { get; set; }
 
         [Required(ErrorMessage = "Recipe must include a time estimate.")]
-        public int TimeEstimate { get; set; }
+        public int? TimeEstimate { get; set; }
 
         [Required(ErrorMessage = "Recipe must include an author.")]
-        public string Author { get; set; }
-
-
+        public string? Author { get; set; }
     }
 }
