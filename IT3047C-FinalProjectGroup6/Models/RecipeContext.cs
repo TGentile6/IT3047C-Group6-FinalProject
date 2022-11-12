@@ -22,6 +22,15 @@ namespace IT3047C_FinalProjectGroup6.Models
                     Ingredients = "Tomato Sauce, Heavy Whipping Cream, Olive Oil, Garlic, Pancetta (optional), Vodka, Basil, Penne",
                     Author = "Tony Gentile",
                     TimeEstimate = 45
+                },
+                new Recipe
+                {
+                    id = 2,
+                    Name = "Peanut butter and jelly sandwich",
+                    Description = "An unbeatable combination with both jelly and peanut butter in between two slices of bread",
+                    Ingredients = "Peanut butter, Jelly, Bread",
+                    Author = "Karan Patel",
+                    TimeEstimate = 5
                 }
             );
         }
