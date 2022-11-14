@@ -23,10 +23,32 @@ namespace IT3047C_FinalProjectGroup6.Controllers
             var recipes = context.Recipes.OrderBy(m => m.id).ToList();
             return View(recipes);
         }
+        //[HttpGet]
+        //public IActionResult Delete(int id)
+        //{
+        //    var movie = context.Movies.Find(id);
+        //    return View(movie);
+        //}
 
-        public IActionResult Delete()
+        //[HttpPost]
+        //public IActionResult Delete(Movie movie)
+        //{
+        //    context.Movies.Remove(movie);
+        //    context.SaveChanges();
+        //    return RedirectToAction("Index", "Home");
+        //}
+        [HttpGet]
+        public IActionResult Delete(int id)
         {
-            return View();
+            var recipe = context.Recipes.Find(id);
+            return View(recipe);
+        }
+        [HttpPost]
+        public IActionResult Delete(Recipe recipe)
+        {
+            context.Recipes.Remove(recipe);
+            context.SaveChanges();
+            return RedirectToAction("List", "Recipe");
         }
 
         public IActionResult Edit()
