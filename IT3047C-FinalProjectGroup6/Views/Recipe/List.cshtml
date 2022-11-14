@@ -4,20 +4,26 @@
 
 <h1>Recipe List</h1>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr><th>Name</th><th>Description</th><th>Ingredients</th><th>Time Estimate</th><th>Author</th></tr>
-    </thead>
-    <tbody>
-        @foreach (var recipe in Model)
-        {
-            <tr>
-                <td>@recipe.Name</td>
-                <td>@recipe.Description</td>
-                <td>@recipe.Ingredients</td>
-                <td>@recipe.TimeEstimate mins</td>
-                <td>@recipe.Author</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div>
+    <div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr><th>Name</th><th>Description</th><th>Ingredients</th><th>Time Estimate</th><th>Author</th><th></th></tr>
+            </thead>
+            <tbody>
+                @foreach (var recipe in Model)
+                {
+                    <tr>
+                        <td>@recipe.Name</td>
+                        <td>@recipe.Description</td>
+                        <td>@recipe.Ingredients</td>
+                        <td>@recipe.TimeEstimate mins</td>
+                        <td>@recipe.Author</td>
+                        <td><a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.id" class="btn btn-secondary">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a asp-action="Add" class="btn btn-secondary">Add Recipe</a>
+</div>
