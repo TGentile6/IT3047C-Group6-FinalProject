@@ -38,25 +38,21 @@ namespace IT3047C_FinalProjectGroup6.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add(int id)
+        public IActionResult Add()
         {
-            var movie = context.Recipes.Find(id);
-            return View(movie);
+            return View(new Recipe());
         }
         [HttpPost]
         public IActionResult Add(Recipe recipe)
         {
             if (ModelState.IsValid)
             {
-                if (recipe.id == 0)
-                {
-                    context.Recipes.Add(recipe);
-                }   
-                return RedirectToAction("Index", "Home");
+                context.Recipes.Add(recipe);
+                context.SaveChanges();
+                return RedirectToAction("Index", "Recipe");
             }
             else
             {
-                ModelState.AddModelError("", "Please correct all errors");
                 return View(recipe);
             }
         }
