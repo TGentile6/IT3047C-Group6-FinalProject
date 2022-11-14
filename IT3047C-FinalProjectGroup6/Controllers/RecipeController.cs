@@ -29,9 +29,28 @@ namespace IT3047C_FinalProjectGroup6.Controllers
             return View();
         }
 
-        public IActionResult Edit()
+        [HttpGet]
+        public IActionResult Add(int id)
         {
-            return View();
+            var movie = context.Recipes.Find(id);
+            return View(movie);
+        }
+        [HttpPost]
+        public IActionResult Add(Recipe recipe)
+        {
+            if (ModelState.IsValid)
+            {
+                if (recipe.id == 0)
+                {
+                    context.Recipes.Add(recipe);
+                }   
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Please correct all errors");
+                return View(recipe);
+            }
         }
     }
 }
