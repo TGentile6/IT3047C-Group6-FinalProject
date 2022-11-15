@@ -22,7 +22,7 @@ namespace IT3047C_FinalProjectGroup6.Models
                     Ingredients = "Tomato Sauce, Heavy Whipping Cream, Olive Oil, Garlic, Pancetta (optional), Vodka, Basil, Penne",
                     Author = "Tony Gentile",
                     TimeEstimate = 45,
-                    Image = "url"
+                    Image = "https://www.cook2eatwell.com/wp-content/uploads/2018/05/Pasta-with-Vodka-Sauce-Image-1.jpg"
                 },
                 new Recipe
                 {

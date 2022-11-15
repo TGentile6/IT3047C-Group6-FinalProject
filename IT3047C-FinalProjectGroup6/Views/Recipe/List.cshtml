@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "List";
+    ViewData["Title"] = "Recipe List";
 }
 
 
@@ -8,53 +8,32 @@
         <h1 class="font-weight-bold">Recipes</h1>
         <p>Take a look at some of the recipes we love, and even add your own if you'd like!</p>
     </div>
-    <div>
-        <table class="table table-bordered table-striped shadow-sm">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Ingredients</th>
-                    <th scope="col">Time Estimate</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Image Url</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var recipe in Model)
-                {
-                    <tr>
-                        <td>@recipe.Name</td>
-                        <td>@recipe.Description</td>
-                        <td>@recipe.Ingredients</td>
-                        <td>@recipe.TimeEstimate mins</td>
-                        <td>@recipe.Author</td>
-                        <td>@recipe.Image</td>
-                        <td><a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.id" class="btn btn-secondary">Delete</a></td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="text-center">
+        <a asp-action="Add" class="btn btn-outline-success" style="font-size: 24px;">Add New Recipe</a>
     </div>
-    <a asp-action="Add" class="btn btn-secondary">Add Recipe</a>
-    <div id="test">
+    <div class="mt-4" id="test">
         @{
             foreach(var recipe in Model){
-                <div class="card mb-3" >
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="..." class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">@recipe.Name</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <div class="card mb-4 shadow" >
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="@recipe.Image" class="img-fluid rounded-start" style="object-fit: cover; height: 100%;" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h3 class="card-title mb-3">@recipe.Name</h3>
+                                            <h5 class="card-title">Description:</h5>
+                                            <p class="card-text">@recipe.Description</p>
+                                            <h5 class="card-title">Ingredients:</h5>
+                                            <p class="card-text">@recipe.Ingredients</p>
+                                            <h5 class="card-title">Time Estimate:</h5>
+                                            <p class="card-text">@recipe.TimeEstimate minutes</p>
+                                            <p class="card-text"><small class="text-muted">Added by @recipe.Author</small></p>
+                                    <a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.id" class="link-danger text-end">Delete Recipe</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
             }
         }
     </div>
