@@ -2,13 +2,24 @@
     ViewData["Title"] = "List";
 }
 
-<h1>Recipe List</h1>
 
 <div>
+    <div class="mt-4 p-5 bg-secondary text-white rounded text-center mb-4">
+        <h1 class="font-weight-bold">Recipes</h1>
+        <p>Take a look at some of the recipes we love, and even add your own if you'd like!</p>
+    </div>
     <div>
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr><th>Name</th><th>Description</th><th>Ingredients</th><th>Time Estimate</th><th>Author</th><th></th></tr>
+        <table class="table table-bordered table-striped shadow-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Ingredients</th>
+                    <th scope="col">Time Estimate</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Image Url</th>
+                    <th scope="col">Delete</th>
+                </tr>
             </thead>
             <tbody>
                 @foreach (var recipe in Model)
@@ -19,6 +30,7 @@
                         <td>@recipe.Ingredients</td>
                         <td>@recipe.TimeEstimate mins</td>
                         <td>@recipe.Author</td>
+                        <td>@recipe.Image</td>
                         <td><a asp-controller="Recipe" asp-action="Delete" asp-route-id="@recipe.id" class="btn btn-secondary">Delete</a></td>
                     </tr>
                 }
@@ -26,4 +38,24 @@
         </table>
     </div>
     <a asp-action="Add" class="btn btn-secondary">Add Recipe</a>
+    <div id="test">
+        @{
+            foreach(var recipe in Model){
+                <div class="card mb-3" >
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="..." class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">@recipe.Name</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
 </div>
