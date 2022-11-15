@@ -2,9 +2,23 @@
 @{
     ViewData["Title"] = "Delete Recipe";
 }
-
-<h2>Confirm Deletion</h2>
-<h3>@Model.Name (@Model.Description)</h3>
+<h1>Delete This Entry?</h1>
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Ingredients</th><th>Time Estimate</th><th>Author</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+                <td>@Model.Ingredients</td>
+                <td>@Model.TimeEstimate mins</td>
+                <td>@Model.Author</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="id" />

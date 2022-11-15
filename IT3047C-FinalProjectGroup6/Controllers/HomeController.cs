@@ -18,16 +18,14 @@ namespace IT3047C_FinalProjectGroup6.Controllers
             return View();
         }
 
-<<<<<<< HEAD
+
         public IActionResult AboutUs()
         {
             return View();
         }
 
-        public IActionResult Recipe()
-=======
         public IActionResult Cooking()
->>>>>>> f1be7e073d9509a21525d35b7075461ac25061e9
+
         {
             return View();
         }
