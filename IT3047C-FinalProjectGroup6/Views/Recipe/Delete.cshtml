@@ -3,28 +3,34 @@
     ViewData["Title"] = "Delete Recipe";
 }
 <h1>Delete This Entry?</h1>
-<div>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr><th>Name</th><th>Description</th><th>Ingredients</th><th>Time Estimate</th><th>Author</th></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>@Model.Name</td>
-                <td>@Model.Description</td>
-                <td>@Model.Ingredients</td>
-                <td>@Model.TimeEstimate mins</td>
-                <td>@Model.Author</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="alert alert-danger" role="alert">
+    This action cannot be undone!
+</div>
+<div class="card mb-4 mt-2 shadow">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="@Model.Image" class="img-fluid rounded-start" style="object-fit: cover; height: 100%;" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h3 class="card-title mb-3">@Model.Name</h3>
+                <h5 class="card-title">Description</h5>
+                <p class="card-text">@Model.Description</p>
+                <h5 class="card-title">Ingredients:</h5>
+                <p class="card-text">@Model.Ingredients</p>
+                <h5 class="card-title">Time Estimate</h5>
+                <p class="card-text">@Model.TimeEstimate minutes</p>
+                <p class="card-text"><small class="text-muted">Added by @Model.Author</small></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="id" />
 
-    <button type="submit" class="btn btn-primary">Delete</button>
-    <a asp-controller="recipe" asp-action="List" class="btn btn-primary">Cancel</a>
+    <button type="submit" class="btn btn-outline-danger" style="font-size: 24px;">Delete Recipe</button>
+    <a asp-controller="recipe" asp-action="List" class="btn btn-outline-secondary" style="font-size: 24px;">Cancel</a>
 </form>
 
 

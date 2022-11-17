@@ -24,5 +24,8 @@ namespace IT3047C_FinalProjectGroup6.Models
 
         [Required(ErrorMessage = "Recipe must include an author.")]
         public string? Author { get; set; }
+
+        [Required(ErrorMessage = "Recipe must include an image url.")]
+        public string? Image { get; set; }
     }
 }

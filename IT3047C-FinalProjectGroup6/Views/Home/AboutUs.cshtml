@@ -4,7 +4,6 @@
 <style>
     div {
         align-content: center;
-        font-family: Arial, Helvetica, sans-serif;
         margin: 0 auto;
     }
 
@@ -52,33 +51,28 @@
         background-color: white;
     }
 
+    .card-title {
+        font-weight: bold;
+    }
+
     .about-section {
         padding: 50px;
         text-align: center;
         background-color: #474e5d;
         color: white;
     }
-    .container {
-
-        padding: 0 16px;
-    }
-    .container::after, .row::after {
-            content: "";
-            clear: both;
-            display: table;
-    }
 
     .title {
         color: grey;
     }
 </style>
-
-<div class="about-section">
-    <h1 class="dipslay-4">About Us</h1>
+<div class="container">
+<div class="mt-4 p-5 bg-secondary text-white rounded text-center">
+    <h1 class="font-weight-bold">About Us</h1>
     <p>Want to learn more about the developers behind this beautiful work of art? Well you came to the right place!</p>
     <p>Resize the browser window to see that this page is responsive by the way.</p>
 </div>
-<h2 style="text-align:center" color: #474e5d> Our Team </h2>
+<h2 style="text-align:center; margin-top: 30px; font-size: 50px;" color: #474e5d> Our Team </h2>
         
             <div class="row">
                 <div class="column">
@@ -88,7 +82,7 @@
                             <h3 style="text-align:center"> JP Kelcewski </h3>
                             <p class="card-title">CyberSecurity</p>
                             <p>JP is a third year undergraduate at the University of Cincinnati. JP currently has two Co-op terms under his belt, and is actively searching for another for Summer 2023. Current hobbies are golf, weightlifting, and naps (specifically in a hammock).</p>
-                            <p>kelczejp@mail.uc.edu</p>
+                    <p class="text-muted">kelczejp@mail.uc.edu</p>
                         </div>
                     </div>
                 </div>
@@ -100,7 +94,7 @@
                             <h3 style ="text-align:center"> Karan Patel </h3>
                             <p class="card-title">Software Development</p>
                             <p>Karan is a fourth year undergraduate at the University of Cincinnati. Karan has done 3 co-ops and will be co-oping in Spring and Summer 2023. Karan hobbies include video games, lifting, snowboarding, and basketball.</p>
-                            <p>patel3k7@mail.uc.edu</p>
+                    <p class="text-muted">patel3k7@mail.uc.edu</p>
                         </div>
                     </div>
                 </div>
@@ -112,9 +106,9 @@
                         <img class="Tony" src="/css/Tony.png" alt="Tony" style="width:100%" />
                         <div class="container">
                             <h3 style="text-align:center"> Tony Gentile </h3>
-                            <p class="card-title">CyberSecurity</p>
-                            <p>JP is a third year undergraduate at the University of Cincinnati and is in search for a Co-op for Summer 2023</p>
-                            <p>kelczejp@mail.uc.edu</p>
+                            <p class="card-title">Software Development</p>
+                            <p>Tony is a fourth year at the University of Cincinnati, originally a Computer Science major he switched to Software Development in 2019. Tony's hobbies include cooking, digital art, and programming.</p>
+                            <p class="text-muted">gentilaj@mail.uc.edu</p>
                         </div>
                     </div>
                 </div>
@@ -126,8 +120,9 @@
                             <h3 style="text-align:center"> Saif Bayyari </h3>
                             <p class="card-title" >CyberSecurity</p>
                             <p>JP is a third year undergraduate at the University of Cincinnati and is in search for a Co-op for Summer 2023</p>
-                            <p>kelczejp@mail.uc.edu</p>
+                <p class="text-muted">kelczejp@mail.uc.edu</p>
                         </div>
                     </div>
                 </div>
             </div>
+</div>
