@@ -1,9 +1,73 @@
 ﻿@{
     ViewData["Title"] = "Why We Like Cooking";
 }
+<style>
+    img {
+        height: 300px;
+    }
 
-<h1>Why We Like Cooking</h1>
+    .JP {
+        object-fit: cover;
+        object-position: 0 70%;
+    }
 
-<p> We're a bunch of college dudes that are trying to learn cooking, and we are sharing our recipes with the web! </p>
+    .Karan {
+        object-fit: cover;
+        object-position: 0 25%;
+    }
 
+    .Tony {
+        object-fit: cover;
+        object-position: 0 50%;
+    }
+
+    .Saif {
+        object-fit: cover;
+        object-position: 0 30%;
+    }
+</style>
+<div class="container ">
+    <div class="mt-4 p-5 pb-3 bg-success text-white rounded text-center">
+        <h1 class="font-weight-bold jumboTitle">Why We Like Cooking</h1>
+        <p>The reasons we wanted to share our love for cooking with everyone!</p>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+    <div class="col">
+        <div class="card shadow mx-5">
+            <img class="JP card-img-top" src="~/css/IMG_3598.jpg" alt="JP" style="width:100%">
+            <div class="card-body">
+                <h5 class="card-title">JP Kelczewski</h5>
+                <p class="card-text">Cooking my own meals for the past year has given me more control of what I put into my body, and has provided noticeable benefits for me physically and mentally. Also the ladies dig a man who knows how to cook.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow mx-5">
+            <img class="Karan card-img-top" src="/css/Karan.jpg" alt="Karan" style="width:100%">
+            <div class="card-body">
+                <h5 class="card-title">Karan Patel</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow mx-5">
+            <img class="card-img-top Tony" src="/css/Tony.png" alt="Tony" style="width:100%">
+            <div class="card-body">
+                <h5 class="card-title">Tony Gentile</h5>
+                <p class="card-text">Cooking is a way for me to unwind and have fun from time to time. I love being able to share what I make with others and watching how people react to eating food I've made. I also just love being able to eat good food.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow mx-5">
+            <img class="Saif" src="/css/Saif.png" alt="Saif" style="width:100%">
+            <div class="card-body">
+                <h5 class="card-title">Saif Bayarri</h5>
+                <p class="card-text">Cooking makes me appreciate food more. When I make the food myself, the taste of the finished product is much more satisfying.</p>
+            </div>
+        </div>
+    </div>
+</div>
 <h2> </h2>
