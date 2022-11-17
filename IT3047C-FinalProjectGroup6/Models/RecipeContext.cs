@@ -32,7 +32,7 @@ namespace IT3047C_FinalProjectGroup6.Models
                     Ingredients = "Peanut butter, Jelly, Bread",
                     Author = "Karan Patel",
                     TimeEstimate = 5,
-                    Image = "url"
+                    Image = "https://www.gannett-cdn.com/media/2021/05/02/USATODAY/usatsports/imageForEntry14-XDZ.jpg"
                 }
             );
         }
