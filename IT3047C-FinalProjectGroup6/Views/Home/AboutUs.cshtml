@@ -9,7 +9,6 @@
 
     html {
         box-sizing: border-box;
-        /*overflow: hidden;*/
     }
 
     img {
@@ -35,16 +34,29 @@
         object-position: 0 15%;
     }
 
+    .row{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+
+    }
+
     .column {
-        align-items: center;
-        float: none;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+       align-content: flex-start;
+       overflow-y:hidden;
+       float: none;
         width: 40%;
-        height:40%;
+        min-height:75%;
         margin-bottom: 16px;
         padding: 0 8px;
     }
 
     .card {
+        display: flex;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         margin: 8px;
         color: black;
@@ -62,15 +74,12 @@
         color: white;
     }
 
-    .title {
-        color: grey;
-    }
 </style>
 <div class="container">
     <div class="mt-4 p-5 pb-3 bg-success text-white rounded text-center">
         <h1 class="font-weight-bold jumboTitle">About Us</h1>
     <p>Want to learn more about the developers behind this beautiful work of art? Well you came to the right place!</p>
-    <p>Resize the browser window to see that this page is responsive by the way.</p>
+    
 </div>
 <h2 style="text-align:center; margin-top: 30px; font-size: 50px; font-family: 'Dancing Script'; font-weight: 800;" color: #474e5d> Our Team </h2>
         
@@ -81,7 +90,7 @@
                         <div class="container">
                             <h3 style="text-align:center"> JP Kelczewski </h3>
                             <p class="card-title">CyberSecurity</p>
-                            <p>JP is a third year undergraduate at the University of Cincinnati. JP currently has two Co-op terms under his belt, and is actively searching for another for Summer 2023. Current hobbies are golf, weightlifting, and naps (specifically in a hammock).</p>
+                            <p>JP is a third year undergraduate at the University of Cincinnati. JP currently has two Co-op terms under his belt, and is actively searching for another for Summer 2023. Current hobbies are golf, weightlifting, and naps.</p>
                     <p class="text-muted">kelczejp@mail.uc.edu</p>
                         </div>
                     </div>
